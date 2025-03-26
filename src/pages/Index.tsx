@@ -25,61 +25,62 @@ const Index = () => {
   }, []);
   
   return (
-    <div className="relative min-h-screen pb-20">
-      <div className="px-6">
-        <Navbar />
-        
-        <h1 className="text-5xl font-bold mt-6 mb-8 tracking-tight animate-fade-in">
-          DRUGBUSTER
-        </h1>
-        
-        <div className="space-y-6" ref={elementsRef}>
-          <LocationButton 
-            text="localisation des amis" 
-            className="animate-on-mount"
-          />
-          
-          <AlertButton 
-            text="signaler alerte" 
-            className="animate-on-mount"
-          />
-          
-          <DrugTestDevices />
-          
-          <div className="grid grid-cols-2 gap-4">
-            <FeatureCard
-              icon={<MessageSquare className="h-7 w-7" />}
-              title="expériences de la communauté"
-              onClick={() => navigate('/community')}
-              className="animate-on-mount"
-            />
-            
-            <FeatureCard
-              icon={<Wine className="h-7 w-7" />}
-              title="lieux sûrs"
-              onClick={() => navigate('/safe-places')}
-              className="animate-on-mount"
-            />
-            
-            <FeatureCard
-              icon={<Pill className="h-7 w-7" />}
-              title="informations sur les drogues"
-              onClick={() => navigate('/drug-info')}
-              className="animate-on-mount"
-            />
-            
-            <FeatureCard
-              icon={<Check className="h-7 w-7" />}
-              title="consignes et procédures"
-              onClick={() => navigate('/guidelines')}
-              className="animate-on-mount"
-            />
-          </div>
-        </div>
-      </div>
+   <div className="relative min-h-screen pb-0">
+  <div className="p-0 m-0">
+    <Navbar />
+    
+    <h1 className="text-5xl font-bold tracking-tight animate-fade-in m-0">
+      DRUGBUSTER
+    </h1>
+    
+    <div className="space-y-6" ref={elementsRef}>
+      <LocationButton 
+        text="localisation des amis" 
+        className="animate-on-mount"
+      />
       
-      <BottomNavbar />
+      <AlertButton 
+        text="signaler alerte" 
+        className="animate-on-mount"
+      />
+      
+      <DrugTestDevices />
+      
+      <div className="grid grid-cols-2 gap-4">
+        <FeatureCard
+          icon={<MessageSquare className="h-7 w-7" />}
+          title="expériences de la communauté"
+          onClick={() => navigate('/community')}
+          className="animate-on-mount"
+        />
+        
+        <FeatureCard
+          icon={<Wine className="h-7 w-7" />}
+          title="lieux sûrs"
+          onClick={() => navigate('/safe-places')}
+          className="animate-on-mount"
+        />
+        
+        <FeatureCard
+          icon={<Pill className="h-7 w-7" />}
+          title="informations sur les drogues"
+          onClick={() => navigate('/drug-info')}
+          className="animate-on-mount"
+        />
+        
+        <FeatureCard
+          icon={<Check className="h-7 w-7" />}
+          title="consignes et procédures"
+          onClick={() => navigate('/guidelines')}
+          className="animate-on-mount"
+        />
+      </div>
     </div>
+  </div>
+  
+  <BottomNavbar />
+</div>
+
   );
 };
 
