@@ -25,7 +25,7 @@ const Index = () => {
   }, []);
   
   return (
-   <div className="relative min-h-screen pb-0">
+   <div className="relative min-h-screen pb-0 p-[10px]">
   <div className="p-0 m-0">
     <Navbar />
     
