@@ -46,7 +46,7 @@ const Index = () => {
           
           <DrugTestDevices />
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-4">
             <FeatureCard
               icon={<MessageSquare className="h-7 w-7" />}
               title="expériences de la communauté"
