@@ -61,6 +61,7 @@ export default {
 				drugbuster: {
 					black: '#121212',
 					darkgray: '#1a1a1a',
+					background: '#1e1e1f',
 					card: '#222222',
 					purple: '#9370DB'
 				},
