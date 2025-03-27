@@ -22,7 +22,7 @@ const AlertButton: React.FC<AlertButtonProps> = ({ text, className }) => {
       onClick={handleClick}
       className={cn(
         "flex items-center gap-4 py-4 px-6 rounded-full border",
-        "border-purple-light/50 transition-all duration-300",
+        "border-purple-light/50 bg-white/5 transition-all duration-300",
         "hover:bg-purple-light/10 active:scale-[0.98] animate-fade-in",
         className
       )}

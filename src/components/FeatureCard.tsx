@@ -19,7 +19,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
     <button
       onClick={onClick}
       className={cn(
-        "flex flex-col items-center justify-center gap-3 p-4 h-32 bg-drugbuster-card rounded-xl transition-all duration-300",
+        "flex flex-col items-center justify-center gap-3 p-4 h-32 bg-white/5 rounded-xl transition-all duration-300",
         "hover:bg-opacity-80 active:scale-[0.98] card-glow animate-fade-in text-center",
         className
       )}

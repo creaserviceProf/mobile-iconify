@@ -20,7 +20,7 @@ const LocationButton: React.FC<LocationButtonProps> = ({ text, className }) => {
     <button
       onClick={handleClick}
       className={cn(
-        "flex items-center justify-between w-full py-3 px-1",
+        "flex items-center justify-between w-full py-3 px-1 bg-white/5 rounded-lg",
         "transition-all duration-300 hover:opacity-80 animate-fade-in",
         className
       )}
