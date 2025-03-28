@@ -7,7 +7,7 @@ import FeatureCard from '@/components/FeatureCard';
 import BottomNavbar from '@/components/BottomNavbar';
 import DrugTestDevices from '@/components/DrugTestDevices';
 import { useNavigate } from 'react-router-dom';
-import { MessageSquare, Wine, Pill, Check } from 'lucide-react';
+import { MessageSquare, Pill } from 'lucide-react';
 
 const Index = () => {
   const navigate = useNavigate();
@@ -55,7 +55,7 @@ const Index = () => {
         />
         
         <FeatureCard
-          icon={<Wine className="h-7 w-7" />}
+          icon={<img src="/lovable-uploads/5077355a-5fa0-40b8-96cb-bd783e11ad9f.png" alt="Lieux sûrs" className="h-7 w-7" />}
           title="lieux sûrs"
           onClick={() => navigate('/safe-places')}
           className="animate-on-mount"
@@ -69,7 +69,7 @@ const Index = () => {
         />
         
         <FeatureCard
-          icon={<Check className="h-7 w-7" />}
+          icon={<img src="/lovable-uploads/9b4d079b-4821-4931-b0eb-f54c13fe6032.png" alt="Consignes et procédures" className="h-7 w-7" />}
           title="consignes et procédures"
           onClick={() => navigate('/guidelines')}
           className="animate-on-mount"
