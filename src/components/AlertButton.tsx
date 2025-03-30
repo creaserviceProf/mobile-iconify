@@ -29,7 +29,7 @@ const AlertButton: React.FC<AlertButtonProps> = ({ text, className }) => {
   };
 
   return (
-    <div className="relative">
+    <div className="relative flex items-center">
       <button
         onClick={handleClick}
         className={cn(
@@ -47,15 +47,13 @@ const AlertButton: React.FC<AlertButtonProps> = ({ text, className }) => {
         <div 
           onClick={handleCircleClick}
           className={cn(
-            "absolute bg-red-500 border-4 border-white rounded-full cursor-pointer",
+            "ml-4 bg-red-500 border-4 border-white rounded-full cursor-pointer",
             "animate-fade-in transition-all duration-300"
           )}
           style={{
-            width: '50%',
-            height: '50%',
-            top: '50%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
+            width: '48px',
+            height: '48px',
+            aspectRatio: '1/1'
           }}
         />
       )}
