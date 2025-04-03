@@ -132,6 +132,9 @@
   padding: 0;
   text-align: left;
   overflow: hidden;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .animated-element {
@@ -154,4 +157,14 @@
 .nav-icon:hover {
   transform: translateY(-2px);
   filter: brightness(1.2);
+}
+
+/* Custom scrollbar styling */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

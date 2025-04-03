@@ -8,6 +8,7 @@ import BottomNavbar from '@/components/BottomNavbar';
 import DrugTestDevices from '@/components/DrugTestDevices';
 import { useNavigate } from 'react-router-dom';
 import { MessageSquare, Wine, Pill, Check } from 'lucide-react';
+import { ScrollArea } from '@/components/ui/scroll-area';
 
 const Index = () => {
   const navigate = useNavigate();
@@ -25,62 +26,61 @@ const Index = () => {
   }, []);
   
   return (
-   <div className="relative min-h-screen pb-0 p-[10px]">
-  <div className="p-0 m-0">
-    <Navbar />
+   <div className="relative min-h-screen pb-0 p-[10px] flex flex-col">
+     <Navbar />
     
-    <h1 className="text-5xl font-bold tracking-tight animate-fade-in m-0">
-      DRUGBUSTER
-    </h1>
+     <h1 className="text-5xl font-bold tracking-tight animate-fade-in m-0 mb-4">
+       DRUGBUSTER
+     </h1>
+     
+     <ScrollArea className="flex-1 -mx-[10px] px-[10px]">
+       <div className="space-y-6 pb-20" ref={elementsRef}>
+         <LocationButton 
+           text="localisation des amis" 
+           className="animate-on-mount"
+         />
+         
+         <AlertButton 
+           text="signaler alerte" 
+           className="animate-on-mount"
+         />
+         
+         <DrugTestDevices />
+         
+         <div className="grid grid-cols-2 gap-4">
+           <FeatureCard
+             icon={<MessageSquare className="h-7 w-7" />}
+             title="expériences de la communauté"
+             onClick={() => navigate('/community')}
+             className="animate-on-mount"
+           />
+           
+           <FeatureCard
+             icon={<Wine className="h-7 w-7" />}
+             title="lieux sûrs"
+             onClick={() => navigate('/safe-places')}
+             className="animate-on-mount"
+           />
+           
+           <FeatureCard
+             icon={<Pill className="h-7 w-7" />}
+             title="informations sur les drogues"
+             onClick={() => navigate('/drug-info')}
+             className="animate-on-mount"
+           />
+           
+           <FeatureCard
+             icon={<Check className="h-7 w-7" />}
+             title="consignes et procédures"
+             onClick={() => navigate('/guidelines')}
+             className="animate-on-mount"
+           />
+         </div>
+       </div>
+     </ScrollArea>
     
-    <div className="space-y-6" ref={elementsRef}>
-      <LocationButton 
-        text="localisation des amis" 
-        className="animate-on-mount"
-      />
-      
-      <AlertButton 
-        text="signaler alerte" 
-        className="animate-on-mount"
-      />
-      
-      <DrugTestDevices />
-      
-      <div className="grid grid-cols-2 gap-4">
-        <FeatureCard
-          icon={<MessageSquare className="h-7 w-7" />}
-          title="expériences de la communauté"
-          onClick={() => navigate('/community')}
-          className="animate-on-mount"
-        />
-        
-        <FeatureCard
-          icon={<Wine className="h-7 w-7" />}
-          title="lieux sûrs"
-          onClick={() => navigate('/safe-places')}
-          className="animate-on-mount"
-        />
-        
-        <FeatureCard
-          icon={<Pill className="h-7 w-7" />}
-          title="informations sur les drogues"
-          onClick={() => navigate('/drug-info')}
-          className="animate-on-mount"
-        />
-        
-        <FeatureCard
-          icon={<Check className="h-7 w-7" />}
-          title="consignes et procédures"
-          onClick={() => navigate('/guidelines')}
-          className="animate-on-mount"
-        />
-      </div>
-    </div>
-  </div>
-  
-  <BottomNavbar />
-</div>
-
+     <BottomNavbar />
+   </div>
   );
 };
 
