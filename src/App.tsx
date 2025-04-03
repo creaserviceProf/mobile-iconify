@@ -9,6 +9,7 @@ import Location from "./pages/Location";
 import Community from "./pages/Community";
 import SafePlaces from "./pages/SafePlaces";
 import DrugInfo from "./pages/DrugInfo";
+import DeviceProduits from "./pages/DeviceProduits";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,6 +26,7 @@ const App = () => (
           <Route path="/community" element={<Community />} />
           <Route path="/safe-places" element={<SafePlaces />} />
           <Route path="/drug-info" element={<DrugInfo />} />
+          <Route path="/device-produits" element={<DeviceProduits />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
